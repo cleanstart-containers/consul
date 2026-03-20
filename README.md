@@ -5,29 +5,17 @@ The CleanStart Consul image provides a production-ready, security-hardened conta
 📌 **Base Foundation**: Production-ready container from cleanstart.
 
 **Image Path**: `ghcr.io/cleanstart-containers/consul`
+
 **Registry**: cleanstart Registry
-
-## Key Features
-Core capabilities and strengths of this container
-
-
-
-## Common Use Cases
-Typical scenarios where this container excels
-
-
 
 ## Pull Latest Image
 Download the container image from the registry
 
 ```bash
-docker pull ghcr.io/cleanstart-containers/consul:consul
+docker pull ghcr.io/cleanstart-containers/consul:latest
 ```
 ```bash
-docker pull ghcr.io/cleanstart-containers/consul:container
-```
-```bash
-docker pull ghcr.io/cleanstart-containers/consul:enterprise
+docker pull ghcr.io/cleanstart-containers/consul:latest-dev
 ```
 
 ## Basic Run
@@ -43,7 +31,6 @@ Deploy with production security settings
 ```bash
 docker run -d --name consul-prod \
   --security-opt=no-new-privileges \
-  --user 1000:1000 \
   --restart unless-stopped \
   ghcr.io/cleanstart-containers/consul:latest
 ```
@@ -67,10 +54,6 @@ Configuration options available through environment variables
 |----------|---------|-------------|
 | ENV | production | Environment mode |
 | LOG_LEVEL | info | Logging level |
-
-## Security Best Practices
-Recommended security configurations and practices
-
 
 
 ## Kubernetes Security Context
